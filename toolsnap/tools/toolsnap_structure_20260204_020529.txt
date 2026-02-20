@@ -1,0 +1,137 @@
+ToolSnap Structure Analysis
+Generated: 2026-02-04 02:05:29
+Root: C:\toolsnap
+============================================================
+
+C:\toolsnap
+|--- app/
+|    |--- src/
+|    |    +--- main/
+|    |         |--- java/
+|    |         |    +--- com/
+|    |         |         +--- toolsnap/
+|    |         |              |--- config/
+|    |         |              |    |--- CaptureConfig.kt
+|    |         |              |    |--- CoatingData.kt
+|    |         |              |    |--- ComponentTemplates.kt
+|    |         |              |    +--- FormTemplates.kt
+|    |         |              |--- core/
+|    |         |              |    |--- model/
+|    |         |              |    |    |--- AssemblyType.kt
+|    |         |              |    |    |--- CaptureField.kt
+|    |         |              |    |    |--- CaptureSession.kt
+|    |         |              |    |    |--- ComponentLink.kt
+|    |         |              |    |    |--- ComponentStatus.kt
+|    |         |              |    |    |--- ComponentType.kt
+|    |         |              |    |    |--- FieldStatus.kt
+|    |         |              |    |    |--- PendingComponent.kt
+|    |         |              |    |    |--- SpeedsFeedsRecord.kt
+|    |         |              |    |    |--- Tool.kt
+|    |         |              |    |    |--- ToolAssembly.kt
+|    |         |              |    |    |--- ToolCategory.kt
+|    |         |              |    |    |--- ToolComponent.kt
+|    |         |              |    |    |--- ToolStatus.kt
+|    |         |              |    |    +--- UnitSystem.kt
+|    |         |              |    |--- ocr/
+|    |         |              |    |    +--- OcrProcessor.kt
+|    |         |              |    +--- session/
+|    |         |              |         |--- SessionExporter.kt
+|    |         |              |         +--- SessionManager.kt
+|    |         |              |--- ui/
+|    |         |              |    |--- components/
+|    |         |              |    |--- detail/
+|    |         |              |    |    |--- FieldEditNavHost.kt
+|    |         |              |    |    +--- SessionDetailScreen.kt
+|    |         |              |    |--- home/
+|    |         |              |    |    +--- HomeScreen.kt
+|    |         |              |    |--- theme/
+|    |         |              |    |    |--- ShopFloor.kt
+|    |         |              |    |    +--- Theme.kt
+|    |         |              |    |--- tools/
+|    |         |              |    |    +--- CoatingRecommendationScreen.kt
+|    |         |              |    |--- wizard/
+|    |         |              |    |    |--- AssemblyTypePickerScreen.kt
+|    |         |              |    |    |--- CaptureStepScreen.kt
+|    |         |              |    |    |--- CategoryPickerScreen.kt
+|    |         |              |    |    |--- ComponentLinkScreen.kt
+|    |         |              |    |    |--- CropScreen.kt
+|    |         |              |    |    |--- DataEntryChoiceScreen.kt
+|    |         |              |    |    |--- ManualEntryScreen.kt
+|    |         |              |    |    |--- NameEntryScreen.kt
+|    |         |              |    |    |--- OcrReviewScreen.kt
+|    |         |              |    |    |--- PhotoReviewScreen.kt
+|    |         |              |    |    |--- WizardDialogs.kt
+|    |         |              |    |    |--- WizardNavHost.kt
+|    |         |              |    |    +--- WizardSummaryScreen.kt
+|    |         |              |    +--- NavHost.kt
+|    |         |              |--- utils/
+|    |         |              |    |--- FileUtils.kt
+|    |         |              |    |--- ImageUtils.kt
+|    |         |              |    |--- JsonUtils.kt
+|    |         |              |    |--- ManifestV2.kt
+|    |         |              |    +--- ManifestV3.kt
+|    |         |              |--- MainActivity.kt
+|    |         |              +--- ToolSnapApp.kt
+|    |         |--- res/
+|    |         |    |--- drawable/
+|    |         |    |--- layout/
+|    |         |    |--- mipmap-hdpi/
+|    |         |    |--- mipmap-mdpi/
+|    |         |    |--- mipmap-xhdpi/
+|    |         |    |--- mipmap-xxhdpi/
+|    |         |    |--- mipmap-xxxhdpi/
+|    |         |    |--- values/
+|    |         |    |--- xml/
+|    |         +--- AndroidManifest.xml
+|    |--- build.gradle.kts
+|    |--- proguard-rules.pro
+|    +--- ToolSnap_Hardening_Punch_List.md
+|--- docs/
+|    |--- setup_toolsnap_structure.ps1
+|    |--- ToolSnap_Architecture.md
+|    +--- ToolSnap_Current_State.md
+|--- gradle/
+|    +--- wrapper/
+|         +--- gradle-wrapper.properties
+|--- tools/
+|    |--- pc_sync/
+|    |    +--- toolsnap_sync.py
+|    |--- toolsnap_watcher/
+|    |    |--- run_toolsnap_watcher.bat
+|    |    +--- toolsnap_watcher.py
+|    |--- toolsnap_watcher_old/
+|    |    |--- run_toolsnap_watcher.bat
+|    |    |--- toolsnap_watcher.py
+|    |    |--- TOOLSNAP_WATCHER_README.md
+|    |    |--- watcher_ignore.json
+|    |    |--- watcher_routes.json
+|    |    +--- watcher_settings.json
+|    |--- toolsnap_structure.bat
+|    |--- toolsnap_structure.ps1
+|    +--- toolsnap_structure.py
+|--- build.gradle.kts
+|--- gradle.properties
+|--- gradlew.bat
+|--- local.properties
+|--- settings.gradle.kts
+|--- ToolSnap_Hardening_Punch_List.md
+|--- toolsnap_structure.txt
+|--- ToolSnap_V2_Data_Model.md
++--- ToolSnap_V2_Relational_Redesign.md
+
+============================================================
+Summary:
+  Total folders: 36
+  Total files: 81
+
+  Files by type:
+    .kt: 49
+    .md: 7
+    .bat: 4
+    .xml: 4
+    .py: 4
+    .kts: 3
+    .properties: 3
+    .json: 3
+    .ps1: 2
+    .txt: 1

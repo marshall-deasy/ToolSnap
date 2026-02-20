@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <cache-path
+        name="shared_zips"
+        path="/" />
+    <files-path
+        name="session_exports"
+        path="toolsnap_exports/" />
+    <external-path
+        name="documents_toolsnap"
+        path="Documents/ToolSnap/" />
+</paths>

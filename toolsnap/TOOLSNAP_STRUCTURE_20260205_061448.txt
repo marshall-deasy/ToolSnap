@@ -1,0 +1,166 @@
+toolsnap/
+├── .gradle/
+│   ├── 8.5/
+│   │   ├── checksums/
+│   │   │   ├── checksums.lock
+│   │   │   ├── md5-checksums.bin
+│   │   │   └── sha1-checksums.bin
+│   │   ├── dependencies-accessors/
+│   │   │   ├── dependencies-accessors.lock
+│   │   │   └── gc.properties
+│   │   ├── executionHistory/
+│   │   │   ├── executionHistory.bin
+│   │   │   └── executionHistory.lock
+│   │   ├── fileChanges/
+│   │   │   └── last-build.bin
+│   │   ├── fileHashes/
+│   │   │   ├── fileHashes.bin
+│   │   │   ├── fileHashes.lock
+│   │   │   └── resourceHashesCache.bin
+│   │   ├── vcsMetadata/
+│   │   └── gc.properties
+│   ├── buildOutputCleanup/
+│   │   ├── buildOutputCleanup.lock
+│   │   ├── cache.properties
+│   │   └── outputFiles.bin
+│   ├── kotlin/
+│   │   ├── errors/
+│   │   └── sessions/
+│   ├── vcs-1/
+│   │   └── gc.properties
+│   ├── config.properties
+│   └── file-system.probe
+├── app/
+│   ├── src/
+│   │   └── main/
+│   │       ├── java/
+│   │       │   └── com/
+│   │       │       └── toolsnap/
+│   │       │           ├── config/
+│   │       │           │   ├── CaptureConfig.kt
+│   │       │           │   ├── CoatingData.kt
+│   │       │           │   ├── ComponentTemplates.kt
+│   │       │           │   ├── DropdownOptions.kt
+│   │       │           │   └── FormTemplates.kt
+│   │       │           ├── core/
+│   │       │           │   ├── model/
+│   │       │           │   │   ├── CaptureField.kt
+│   │       │           │   │   ├── CaptureSession.kt
+│   │       │           │   │   ├── ComponentLink.kt
+│   │       │           │   │   ├── FieldStatus.kt
+│   │       │           │   │   ├── PendingComponent.kt
+│   │       │           │   │   ├── Tool.kt
+│   │       │           │   │   ├── ToolCategory.kt
+│   │       │           │   │   ├── ToolStatus.kt
+│   │       │           │   │   └── UnitSystem.kt
+│   │       │           │   ├── ocr/
+│   │       │           │   │   ├── OcrFieldMatcher.kt
+│   │       │           │   │   └── OcrProcessor.kt
+│   │       │           │   └── session/
+│   │       │           │       ├── ManifestExporter.kt
+│   │       │           │       ├── SessionExporter.kt
+│   │       │           │       └── SessionManager.kt
+│   │       │           ├── ui/
+│   │       │           │   ├── components/
+│   │       │           │   ├── detail/
+│   │       │           │   │   ├── FieldEditNavHost.kt
+│   │       │           │   │   └── SessionDetailScreen.kt
+│   │       │           │   ├── home/
+│   │       │           │   │   └── HomeScreen.kt
+│   │       │           │   ├── theme/
+│   │       │           │   │   ├── ShopFloor.kt
+│   │       │           │   │   └── Theme.kt
+│   │       │           │   ├── tools/
+│   │       │           │   │   └── CoatingRecommendationScreen.kt
+│   │       │           │   ├── wizard/
+│   │       │           │   │   ├── CaptureStepScreen.kt
+│   │       │           │   │   ├── CategoryPickerScreen.kt
+│   │       │           │   │   ├── ClassificationScreen.kt
+│   │       │           │   │   ├── ComponentLinkScreen.kt
+│   │       │           │   │   ├── ComponentListView.kt
+│   │       │           │   │   ├── CropScreen.kt
+│   │       │           │   │   ├── DataEntryChoiceScreen.kt
+│   │       │           │   │   ├── DropdownPickerSheet.kt
+│   │       │           │   │   ├── IdentityEntryScreen.kt
+│   │       │           │   │   ├── IdentityOcrPickerScreen.kt
+│   │       │           │   │   ├── LinkHelpers.kt
+│   │       │           │   │   ├── ManualEntryScreen.kt
+│   │       │           │   │   ├── NameEntryScreen.kt
+│   │       │           │   │   ├── NameOcrPickerScreen.kt
+│   │       │           │   │   ├── OcrReviewScreen.kt
+│   │       │           │   │   ├── OcrTargetField.kt
+│   │       │           │   │   ├── PhotoReviewScreen.kt
+│   │       │           │   │   ├── PhotoSaveScreen.kt
+│   │       │           │   │   ├── QuickAddFlow.kt
+│   │       │           │   │   ├── SearchLinkFlow.kt
+│   │       │           │   │   ├── SpecificationsScreen.kt
+│   │       │           │   │   ├── WizardDialogs.kt
+│   │       │           │   │   ├── WizardNavHost.kt
+│   │       │           │   │   └── WizardSummaryScreen.kt
+│   │       │           │   └── NavHost.kt
+│   │       │           ├── utils/
+│   │       │           │   ├── FileUtils.kt
+│   │       │           │   ├── ImageUtils.kt
+│   │       │           │   ├── IsoInsertParser.kt
+│   │       │           │   ├── JsonUtils.kt
+│   │       │           │   ├── ManifestMigration.kt
+│   │       │           │   └── ManifestV3.kt
+│   │       │           ├── MainActivity.kt
+│   │       │           └── ToolSnapApp.kt
+│   │       ├── res/
+│   │       │   ├── drawable/
+│   │       │   ├── layout/
+│   │       │   ├── mipmap-hdpi/
+│   │       │   ├── mipmap-mdpi/
+│   │       │   ├── mipmap-xhdpi/
+│   │       │   ├── mipmap-xxhdpi/
+│   │       │   ├── mipmap-xxxhdpi/
+│   │       │   ├── values/
+│   │       │   │   ├── strings.xml
+│   │       │   │   └── themes.xml
+│   │       │   └── xml/
+│   │       │       └── file_provider_paths.xml
+│   │       └── AndroidManifest.xml
+│   ├── build.gradle.kts
+│   ├── proguard-rules.pro
+│   └── ToolSnap_Hardening_Punch_List.md
+├── docs/
+│   ├── CHANGELIST 2.md
+│   ├── setup_toolsnap_structure.ps1
+│   ├── ToolSnap_Architecture.md
+│   └── ToolSnap_Current_State.md
+├── gradle/
+│   └── wrapper/
+│       └── gradle-wrapper.properties
+├── tools/
+│   ├── pc_sync/
+│   │   └── toolsnap_sync.py
+│   ├── toolsnap_watcher/
+│   │   ├── run_toolsnap_watcher.bat
+│   │   └── toolsnap_watcher.py
+│   ├── toolsnap_watcher_old/
+│   │   ├── run_toolsnap_watcher.bat
+│   │   ├── toolsnap_watcher.py
+│   │   ├── TOOLSNAP_WATCHER_README.md
+│   │   ├── watcher_ignore.json
+│   │   ├── watcher_routes.json
+│   │   └── watcher_settings.json
+│   ├── collect_toolsnap_clean.ps1
+│   ├── collect_toolsnap_db_clean.ps1
+│   ├── toolsnap_structure.bat
+│   ├── toolsnap_structure.ps1
+│   ├── toolsnap_structure.py
+│   ├── Ts_collect_toolsnap_clean.ps1
+│   └── Ts_collect_toolsnap_db_clean.ps1
+├── build.gradle.kts
+├── claude state on error.txt
+├── gradle.properties
+├── gradlew.bat
+├── local.properties
+├── map_structure.py
+├── settings.gradle.kts
+├── ToolSnap_Hardening_Punch_List.md
+├── ToolSnap_V2_Data_Model.md
+├── ToolSnap_V2_Relational_Redesign.md
+└── tsdb_importer_fix.zip
+[ Dirs: 49 | Files: 115 ]

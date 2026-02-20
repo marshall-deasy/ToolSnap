@@ -1,0 +1,50 @@
+{
+    "sessionId": "3c694015-eb1e-4b38-a959-c44d7f8b3bab",
+    "toolName": "5",
+    "createdAt": "2026-02-03T20:07:54.758880Z",
+    "fields": {
+        "body": {
+            "status": "CAPTURED",
+            "imageFile": "body.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "insert": {
+            "status": "CAPTURED",
+            "imageFile": "insert.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "hardware": {
+            "status": "SKIPPED",
+            "imageFile": null,
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "tool_data": {
+            "status": "CAPTURED",
+            "imageFile": null,
+            "ocrText": "",
+            "entryMethod": "manual",
+            "formData": {
+                "entryMethod": "manual",
+                "values": {
+                }
+            }
+        },
+        "speeds_feeds": {
+            "status": "SKIPPED",
+            "imageFile": null,
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        }
+    },
+    "isComplete": true,
+    "fieldsCaptured": 3,
+    "fieldsSkipped": 2,
+    "fieldsTotal": 5
+}

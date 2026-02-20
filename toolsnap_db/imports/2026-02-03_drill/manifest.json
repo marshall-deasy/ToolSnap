@@ -1,0 +1,53 @@
+{
+    "sessionId": "4dc0cb86-55b4-42d4-ae1d-a034c0816092",
+    "toolName": "drill",
+    "createdAt": "2026-02-04T01:56:13.368775Z",
+    "fields": {
+        "body": {
+            "status": "CAPTURED",
+            "imageFile": "body.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "insert": {
+            "status": "CAPTURED",
+            "imageFile": "insert.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "hardware": {
+            "status": "SKIPPED",
+            "imageFile": null,
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "tool_data": {
+            "status": "CAPTURED",
+            "imageFile": null,
+            "ocrText": "catalog_number: 456788654\nmanufacturer: Iscar\ndescription: Drill — Indexable",
+            "entryMethod": "manual",
+            "formData": {
+                "entryMethod": "manual",
+                "values": {
+                    "catalog_number": "456788654",
+                    "manufacturer": "Iscar",
+                    "description": "Drill — Indexable"
+                }
+            }
+        },
+        "speeds_feeds": {
+            "status": "CAPTURED",
+            "imageFile": "speeds_feeds.jpg",
+            "ocrText": "Storage conditions:\nStore in a dry, ventilated area. Avoid direct sunlight,\nfluorescent lighting, heat and moisture. Do not store above\n100°F (38 °C).",
+            "entryMethod": "ocr",
+            "formData": null
+        }
+    },
+    "isComplete": true,
+    "fieldsCaptured": 4,
+    "fieldsSkipped": 1,
+    "fieldsTotal": 5
+}

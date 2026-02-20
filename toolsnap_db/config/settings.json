@@ -1,0 +1,9 @@
+{
+    "import_directory": "C:/toolsnap_db/imports",
+    "database_path": "toolsnap.db",
+    "photo_cache_max_mb": 200,
+    "window_width": 1400,
+    "window_height": 900,
+    "qr_label_size_mm": 30,
+    "qr_label_prefix": "TS"
+}

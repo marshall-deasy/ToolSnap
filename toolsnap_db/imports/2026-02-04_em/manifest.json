@@ -1,0 +1,32 @@
+{
+    "schemaVersion": 3,
+    "exportedAt": "2026-02-04T10:11:07.093857Z",
+    "tools": [
+        {
+            "toolId": "c30c36ad-1ec7-4337-ac48-d72755981a0b",
+            "name": "EM",
+            "category": "END_MILL",
+            "type": "standalone",
+            "status": "CAPTURED",
+            "manufacturer": "OSG",
+            "catalogNumber": "345667",
+            "description": null,
+            "unitSystem": "IMPERIAL",
+            "attributes": {
+                "shank_diameter": "7/16\"",
+                "flutes": "4",
+                "cutting_diameter": "3/8\""
+            },
+            "photos": [
+                "photo.jpg"
+            ],
+            "tags": [
+            ],
+            "notes": null,
+            "createdAt": "2026-02-04T10:11:07.091375Z",
+            "modifiedAt": "2026-02-04T10:11:07.091901Z"
+        }
+    ],
+    "components": [
+    ]
+}

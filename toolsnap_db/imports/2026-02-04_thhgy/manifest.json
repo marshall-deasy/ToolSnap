@@ -1,0 +1,30 @@
+{
+    "schemaVersion": 3,
+    "exportedAt": "2026-02-04T09:00:37.842729Z",
+    "tools": [
+        {
+            "toolId": "ea28076b-df30-4767-8e5e-95507531e197",
+            "name": "thhgy",
+            "category": "END_MILL",
+            "type": "standalone",
+            "status": "PENDING",
+            "manufacturer": null,
+            "catalogNumber": null,
+            "description": null,
+            "unitSystem": "IMPERIAL",
+            "attributes": {
+            },
+            "photos": [
+                "photo_0.jpg",
+                "photo_1.jpg"
+            ],
+            "tags": [
+            ],
+            "notes": null,
+            "createdAt": "2026-02-04T09:00:37.842240Z",
+            "modifiedAt": "2026-02-04T09:00:37.842320Z"
+        }
+    ],
+    "components": [
+    ]
+}

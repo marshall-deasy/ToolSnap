@@ -1,0 +1,44 @@
+{
+    "sessionId": "21131263-64fb-40ca-b1fb-d681570965c1",
+    "toolName": "fgyhhnh",
+    "createdAt": "2026-02-04T05:38:26.816962Z",
+    "fields": {
+        "body": {
+            "status": "CAPTURED",
+            "imageFile": "body.jpg",
+            "ocrText": null,
+            "entryMethod": "assembly_type",
+            "formData": {
+                "entryMethod": "assembly_type",
+                "values": {
+                    "assembly_type": "END_MILL"
+                }
+            }
+        },
+        "insert": {
+            "status": "SKIPPED",
+            "imageFile": null,
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "hardware": {
+            "status": "SKIPPED",
+            "imageFile": null,
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "tool_data": {
+            "status": "SKIPPED",
+            "imageFile": null,
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        }
+    },
+    "isComplete": true,
+    "fieldsCaptured": 1,
+    "fieldsSkipped": 3,
+    "fieldsTotal": 4
+}

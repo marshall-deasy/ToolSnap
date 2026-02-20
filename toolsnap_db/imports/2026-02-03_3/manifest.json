@@ -1,0 +1,57 @@
+{
+    "sessionId": "68739ea3-a651-479e-900d-67742ffc4a9d",
+    "toolName": "3",
+    "createdAt": "2026-02-03T19:53:33.051594Z",
+    "fields": {
+        "body": {
+            "status": "CAPTURED",
+            "imageFile": "body.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "insert": {
+            "status": "CAPTURED",
+            "imageFile": "insert.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "hardware": {
+            "status": "CAPTURED",
+            "imageFile": "hardware.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "tool_data": {
+            "status": "CAPTURED",
+            "imageFile": null,
+            "ocrText": "catalog_number: iyfjyjyfjyvjyv\nflutes: 5\ntool_diameter: iyfuyfu\ndescription: ggugg\nnose_radius: jhvjyvjyv\ninsert_grade: jyfuyviyf\nmanufacturer: yggggg",
+            "entryMethod": "manual",
+            "formData": {
+                "entryMethod": "manual",
+                "values": {
+                    "catalog_number": "iyfjyjyfjyvjyv",
+                    "flutes": "5",
+                    "tool_diameter": "iyfuyfu",
+                    "description": "ggugg",
+                    "nose_radius": "jhvjyvjyv",
+                    "insert_grade": "jyfuyviyf",
+                    "manufacturer": "yggggg"
+                }
+            }
+        },
+        "speeds_feeds": {
+            "status": "CAPTURED",
+            "imageFile": "speeds_feeds.jpg",
+            "ocrText": "USA\nApex Tool Group, LLC\n1000 Lufkin Road\nApex, NC 27539\nATTN: Repair Department\nPHONE: 1-800-476-3030\nFAX: 919-387-2640",
+            "entryMethod": "ocr",
+            "formData": null
+        }
+    },
+    "isComplete": true,
+    "fieldsCaptured": 5,
+    "fieldsSkipped": 0,
+    "fieldsTotal": 5
+}

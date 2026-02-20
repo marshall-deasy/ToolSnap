@@ -1,0 +1,58 @@
+{
+    "sessionId": "4b5375a8-9f7d-44f8-867e-7767e05da5f2",
+    "toolName": "9",
+    "createdAt": "2026-02-03T20:42:22.124324Z",
+    "fields": {
+        "body": {
+            "status": "CAPTURED",
+            "imageFile": "body.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "insert": {
+            "status": "SKIPPED",
+            "imageFile": null,
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "hardware": {
+            "status": "SKIPPED",
+            "imageFile": null,
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "tool_data": {
+            "status": "CAPTURED",
+            "imageFile": null,
+            "ocrText": "coating: TiCN (Titanium Carbonitride)\ncatalog_number: 55566778\nflutes: 2\ntool_diameter: 1/4\"\ndescription: End Mill — Square\nnose_radius: 0.016\"\ninsert_grade: y66\nmanufacturer: YG-1",
+            "entryMethod": "manual",
+            "formData": {
+                "entryMethod": "manual",
+                "values": {
+                    "coating": "TiCN (Titanium Carbonitride)",
+                    "catalog_number": "55566778",
+                    "flutes": "2",
+                    "tool_diameter": "1/4\"",
+                    "description": "End Mill — Square",
+                    "nose_radius": "0.016\"",
+                    "insert_grade": "y66",
+                    "manufacturer": "YG-1"
+                }
+            }
+        },
+        "speeds_feeds": {
+            "status": "CAPTURED",
+            "imageFile": "speeds_feeds.jpg",
+            "ocrText": "USA\nApex Tool Group, LLC\n1000 Lufkin Road\nApex, NC 27539\nATTN. Repair Depariment\nPHONE. 1-800.476-3030\nFAX. 919-387-2640",
+            "entryMethod": "ocr",
+            "formData": null
+        }
+    },
+    "isComplete": true,
+    "fieldsCaptured": 3,
+    "fieldsSkipped": 2,
+    "fieldsTotal": 5
+}

@@ -1,0 +1,21 @@
+{
+  "levels_up_to_root": 2,
+  "log_patterns": [
+    "*.log"
+  ],
+  "exclude_dirs": [
+    "__pycache__",
+    ".git",
+    ".vscode",
+    ".idea",
+    "node_modules",
+    "venv",
+    ".venv",
+    "env",
+    ".env"
+  ],
+  "tail_lines": 100,
+  "refresh_interval_ms": 2000,
+  "max_file_size_mb": 100,
+  "favorites": []
+}

@@ -1,0 +1,46 @@
+{
+    "sessionId": "98186cc8-f394-45cd-86ed-9544ecfb91ff",
+    "toolName": "Drill",
+    "createdAt": "2026-02-04T02:27:54.680218Z",
+    "fields": {
+        "body": {
+            "status": "CAPTURED",
+            "imageFile": "body.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "insert": {
+            "status": "CAPTURED",
+            "imageFile": "insert.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "hardware": {
+            "status": "SKIPPED",
+            "imageFile": null,
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "tool_data": {
+            "status": "CAPTURED",
+            "imageFile": "tool_data.jpg",
+            "ocrText": "DOWNLOADS WATCHER\nENGINEERING STANDARDS PROMPT\nREFACTORING_GUIDE\nFILE MANAGER TOOLKIT STATUS\nmr bot wfa psa playbook\nOAuth schwab Token Instructions\nREADME\nD schwab websocket reference v2\nSTYLE REFERENCE\nB TICK RECORDËR README",
+            "entryMethod": "ocr",
+            "formData": null
+        },
+        "speeds_feeds": {
+            "status": "CAPTURED",
+            "imageFile": "speeds_feeds.jpg",
+            "ocrText": "Local Disk (C:)> auto_trading docs\nN Sort\nName\nD DOWNLOADS WATCHER REFACTORING GUIDE\nENGINEERING STANDARDS PROMPT\nView\nFILE MANAGER TOOLKIT STATUS\nDmr_ bot wfa_psa_playbook\nD OAuth schwab Token Instructions\nREADME\nD schwab websocket reference v2\nSTYLE REFERENCE\nTICK RECORDER README\nSort\nName\nE View\nSearch docs\nThis folder is empty.\nSearch Downloa\nDate mo",
+            "entryMethod": "ocr",
+            "formData": null
+        }
+    },
+    "isComplete": true,
+    "fieldsCaptured": 4,
+    "fieldsSkipped": 1,
+    "fieldsTotal": 5
+}

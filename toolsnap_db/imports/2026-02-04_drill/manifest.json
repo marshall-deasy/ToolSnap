@@ -1,0 +1,31 @@
+{
+    "schemaVersion": 3,
+    "exportedAt": "2026-02-04T08:41:06.695938Z",
+    "tools": [
+        {
+            "toolId": "af778f26-4757-4c91-84bf-78efcea8dc0b",
+            "name": "drill",
+            "category": "DRILL",
+            "type": "standalone",
+            "status": "CAPTURED",
+            "manufacturer": "YG-1",
+            "catalogNumber": "667889990",
+            "description": null,
+            "unitSystem": "IMPERIAL",
+            "attributes": {
+                "cutting_diameter": ".34mm"
+            },
+            "photos": [
+                "photo_0.jpg",
+                "photo_1.jpg"
+            ],
+            "tags": [
+            ],
+            "notes": null,
+            "createdAt": "2026-02-04T08:41:06.695005Z",
+            "modifiedAt": "2026-02-04T08:41:06.695208Z"
+        }
+    ],
+    "components": [
+    ]
+}

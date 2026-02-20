@@ -1,0 +1,46 @@
+{
+    "sessionId": "c2977a1a-f746-4989-8a95-471c69f7e357",
+    "toolName": "1",
+    "createdAt": "2026-02-03T19:19:14.040246Z",
+    "fields": {
+        "body": {
+            "status": "CAPTURED",
+            "imageFile": "body.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "insert": {
+            "status": "CAPTURED",
+            "imageFile": "insert.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "hardware": {
+            "status": "CAPTURED",
+            "imageFile": "hardware.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "tool_data": {
+            "status": "CAPTURED",
+            "imageFile": "tool_data.jpg",
+            "ocrText": "Dovetail Cutter\n\"T-Slot Cutter\n\"Fly Cutter\n\"SLitting Saw\n\"Keyseat Cutter\n\"Grooving / Parting Tool\n\"Turning Insert",
+            "entryMethod": "ocr",
+            "formData": null
+        },
+        "speeds_feeds": {
+            "status": "CAPTURED",
+            "imageFile": "speeds_feeds.jpg",
+            "ocrText": "USA\nApex Tool Group, LLC\n1000 Lufkin Road\nApex, NC 27539\nATTN. Repair Department\nPHONE 1-800-476-3030\nFAX: 919-387-2640",
+            "entryMethod": "ocr",
+            "formData": null
+        }
+    },
+    "isComplete": true,
+    "fieldsCaptured": 5,
+    "fieldsSkipped": 0,
+    "fieldsTotal": 5
+}

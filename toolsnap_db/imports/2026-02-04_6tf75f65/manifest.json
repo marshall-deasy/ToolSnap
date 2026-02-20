@@ -1,0 +1,50 @@
+{
+    "sessionId": "047044e3-c143-4d09-9183-b517f2583bc4",
+    "toolName": "6tf75f65",
+    "createdAt": "2026-02-04T08:29:17.278178Z",
+    "fields": {
+        "body": {
+            "status": "CAPTURED",
+            "imageFile": "body.jpg",
+            "ocrText": null,
+            "entryMethod": "tool_category",
+            "formData": {
+                "entryMethod": "tool_category",
+                "values": {
+                    "tool_category": "INDEXABLE_MILL_BODY"
+                }
+            }
+        },
+        "insert": {
+            "status": "SKIPPED",
+            "imageFile": null,
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "hardware": {
+            "status": "SKIPPED",
+            "imageFile": null,
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "tool_data": {
+            "status": "CAPTURED",
+            "imageFile": null,
+            "ocrText": "catalog_number: 5yyu7\nmanufacturer: Iscar",
+            "entryMethod": "manual",
+            "formData": {
+                "entryMethod": "manual",
+                "values": {
+                    "catalog_number": "5yyu7",
+                    "manufacturer": "Iscar"
+                }
+            }
+        }
+    },
+    "isComplete": true,
+    "fieldsCaptured": 2,
+    "fieldsSkipped": 2,
+    "fieldsTotal": 4
+}

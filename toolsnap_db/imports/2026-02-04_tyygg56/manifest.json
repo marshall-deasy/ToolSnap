@@ -1,0 +1,30 @@
+{
+    "schemaVersion": 3,
+    "exportedAt": "2026-02-04T09:01:35.252873Z",
+    "tools": [
+        {
+            "toolId": "00fb18dc-10d1-4165-b2df-899bcc9aec5c",
+            "name": "tyygg56",
+            "category": "INSERT",
+            "type": "standalone",
+            "status": "PENDING",
+            "manufacturer": null,
+            "catalogNumber": null,
+            "description": null,
+            "unitSystem": "IMPERIAL",
+            "attributes": {
+            },
+            "photos": [
+                "photo_0.jpg",
+                "photo_1.jpg"
+            ],
+            "tags": [
+            ],
+            "notes": null,
+            "createdAt": "2026-02-04T09:01:35.252763Z",
+            "modifiedAt": "2026-02-04T09:01:35.252829Z"
+        }
+    ],
+    "components": [
+    ]
+}

@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}CodeGrep - Code Search{% endblock %}
+
+{% block content %}
+<div class="search-interface">
+    <!-- Project Stats -->
+    <div class="stats-panel">
+        <div class="stat-item">
+            <span class="stat-value">{{ total_files }}</span>
+            <span class="stat-label">Code Files</span>
+        </div>
+        {% for ext, count in file_stats.items() | sort %}
+        <div class="stat-item small">
+            <span class="stat-value">{{ count }}</span>
+            <span class="stat-label">{{ ext }}</span>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Search Form -->
+    <div class="search-panel">
+        <div class="search-form">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search code... (e.g., 'def calculate' or 'import.*schwab')" 
+                class="search-input"
+                autofocus
+            >
+            <button id="searchBtn" class="btn btn-blue">🔍 Search</button>
+            <button id="clearBtn" class="btn btn-secondary">Clear</button>
+        </div>
+        
+        <div class="search-options">
+            <label class="option">
+                <input type="checkbox" id="regexCheck">
+                <span>Regex</span>
+            </label>
+            <label class="option">
+                <input type="checkbox" id="caseCheck">
+                <span>Case Sensitive</span>
+            </label>
+            <label class="option">
+                <input type="checkbox" id="wholeWordCheck">
+                <span>Whole Word</span>
+            </label>
+            <span class="option-info">Context: {{ context_lines }} lines | Max: {{ max_results }} results</span>
+        </div>
+    </div>
+
+    <!-- Search Status -->
+    <div id="searchStatus" class="search-status"></div>
+
+    <!-- Search Results -->
+    <div id="searchResults" class="search-results">
+        <div class="empty-state">
+            <p>Enter a search query to find code across your project.</p>
+            <div class="examples">
+                <p class="examples-title">Examples:</p>
+                <ul>
+                    <li><code>def calculate_position</code> - Find function definitions</li>
+                    <li><code>import schwab_api</code> - Find imports</li>
+                    <li><code>TODO|FIXME</code> - Find comments (use Regex)</li>
+                    <li><code>API_KEY</code> - Find config references</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Pass config to JavaScript
+    window.codeGrepConfig = {
+        projectRoot: {{ project_root | tojson }},
+        editorCommand: {{ config.editor_command | tojson if config else 'code' | tojson }}
+    };
+</script>
+<script src="{{ url_for('static', filename='js/search.js') }}"></script>
+{% endblock %}

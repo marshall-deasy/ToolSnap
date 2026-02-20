@@ -1,0 +1,57 @@
+{
+    "sessionId": "580ee583-bf70-4306-990b-0b3c819f010a",
+    "toolName": "2",
+    "createdAt": "2026-02-03T19:41:13.958883Z",
+    "fields": {
+        "body": {
+            "status": "SKIPPED",
+            "imageFile": "body.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "insert": {
+            "status": "CAPTURED",
+            "imageFile": "insert.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "hardware": {
+            "status": "CAPTURED",
+            "imageFile": "hardware.jpg",
+            "ocrText": null,
+            "entryMethod": null,
+            "formData": null
+        },
+        "tool_data": {
+            "status": "CAPTURED",
+            "imageFile": null,
+            "ocrText": "catalog_number: 1777-3890\nflutes: 2\ntool_diameter: .500\ndescription: 1/2 DRILL\nnose_radius: .047\ninsert_grade: x33\nmanufacturer: K-TOOL",
+            "entryMethod": "manual",
+            "formData": {
+                "entryMethod": "manual",
+                "values": {
+                    "catalog_number": "1777-3890",
+                    "flutes": "2",
+                    "tool_diameter": ".500",
+                    "description": "1/2 DRILL",
+                    "nose_radius": ".047",
+                    "insert_grade": "x33",
+                    "manufacturer": "K-TOOL"
+                }
+            }
+        },
+        "speeds_feeds": {
+            "status": "CAPTURED",
+            "imageFile": "speeds_feeds.jpg",
+            "ocrText": "USA\nApex Tool Group, LLC\n1000 Lufkin Road\nApex, NC 27539\nATTN: Repair Department\nPHONE: 1-800-476-3030\nFAX:919-387-2640",
+            "entryMethod": "ocr",
+            "formData": null
+        }
+    },
+    "isComplete": true,
+    "fieldsCaptured": 4,
+    "fieldsSkipped": 1,
+    "fieldsTotal": 5
+}

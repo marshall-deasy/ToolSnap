@@ -1,0 +1,23 @@
+# Android / Gradle
+.gradle/
+build/
+*.apk
+*.aab
+local.properties
+
+# IDE
+.idea/
+*.iml
+.vs/
+*.suo
+
+# OS
+Thumbs.db
+desktop.ini
+__pycache__/
+*.pyc
+
+# Secrets
+*.env
+**/*secret*
+**/*credential*

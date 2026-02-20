@@ -1,0 +1,84 @@
+FolderSync v1.1 - Changelog
+============================
+
+Release Date: 2026-02-09
+
+NEW FEATURES
+------------
+
+1. Auto-Search for Folders
+   - Added "🔍 Find 'tools'" button to automatically search C:\ for folders named "tools"
+   - Added "🔍 Find Other..." button to search for folders with custom name
+   - Search covers common locations (auto_trading, Users, projects, dev, code, workspace, etc.)
+   - Search depth: 3 levels max for speed
+   - Results presented in checklist dialog with Select All/Deselect All options
+   - All found folders pre-selected for quick batch import
+
+CHANGES
+-------
+
+Files Modified:
+- gui.py: Added two search buttons and handler methods (+48 lines, now 991 lines)
+- scanner.py: Added search_folders_by_name() function (+82 lines, now 224 lines)
+
+Files Added:
+- dialogs.py: New module for folder search dialog (196 lines)
+- start_FS.bat: Windows launcher script
+
+USAGE
+-----
+
+Method 1 - Find 'tools' Folders:
+1. Click "🔍 Find 'tools'" button
+2. Wait 5-15 seconds while app searches
+3. Select which folders to add (all pre-selected)
+4. Click "Add Selected"
+
+Method 2 - Find Other Named Folders:
+1. Click "🔍 Find Other..." button  
+2. Enter folder name to search for (e.g., "utils", "scripts")
+3. Wait for search to complete
+4. Select which folders to add
+5. Click "Add Selected"
+
+After adding folders, click "Compare" to see conflicts.
+
+TECHNICAL NOTES
+---------------
+
+Search Algorithm:
+- Searches only common locations for speed (not full C:\ scan)
+- Max depth: 3 levels below each common location
+- Skips empty folders (must have subdirectories)
+- De-duplicates symlinks via path resolution
+- Handles permission errors gracefully
+
+Common Locations Searched:
+- C:\auto_trading
+- C:\Users
+- C:\projects
+- C:\dev
+- C:\code
+- C:\workspace
+- C:\Documents
+- C:\development
+- C:\repos
+- C:\src
+
+Performance:
+- Typical search time: 5-15 seconds
+- Can still add folders manually if search misses any
+
+KNOWN LIMITATIONS
+-----------------
+
+- Search limited to common paths (not exhaustive C:\ scan)
+- Max search depth: 3 levels to avoid performance issues
+- May miss deeply nested folders outside common locations
+- Use manual "+ Add Folder" for any missed locations
+
+NO MANUAL STEPS REQUIRED
+-------------------------
+
+All changes are backward compatible. Existing functionality unchanged.
+Simply replace files and run start_FS.bat.
