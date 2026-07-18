@@ -1,23 +1,28 @@
-# Android / Gradle
+# IDE / Build
+.idea/
 .gradle/
-build/
-*.apk
-*.aab
+*.iml
 local.properties
 
-# IDE
-.idea/
-*.iml
-.vs/
-*.suo
-
-# OS
-Thumbs.db
-desktop.ini
+# Python
 __pycache__/
 *.pyc
+venv/
+.env
+*.db
+*.sqlite3
+toolsnap.db
 
-# Secrets
-*.env
-**/*secret*
-**/*credential*
+# Android / Mobile
+*.apk
+*.aab
+/toolsnap/app/build/
+/toolsnap/build/
+
+# Data / Imports (large or sensitive)
+toolsnap_db/imports/
+toolsnap_db/imports/**
+
+# Generated
+*.log
+file_tree_*.md   # optional: regenerate as needed
