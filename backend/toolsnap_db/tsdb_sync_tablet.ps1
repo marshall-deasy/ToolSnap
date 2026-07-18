@@ -3,7 +3,8 @@
 
 param(
     [string]$TabletName = "Marshall's Tab S7 FE",
-    [string]$Destination = "C:\toolsnap_db\imports"
+    # Default: the imports/ folder next to this script (backend\toolsnap_db\imports)
+    [string]$Destination = (Join-Path $PSScriptRoot "imports")
 )
 
 Write-Host "=" * 60
