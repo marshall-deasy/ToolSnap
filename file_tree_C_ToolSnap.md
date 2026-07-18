@@ -10,6 +10,8 @@ ToolSnap/
 │   ├── runConfigurations.xml
 │   └── workspace.xml
 ├── docs/
+│   ├── DOCUMENTATION_STANDARD.md
+│   ├── ENGINEERING_RULES.md
 │   └── setup_toolsnap_structure.ps1
 ├── toolsnap/
 │   ├── .gradle/
@@ -118,6 +120,7 @@ ToolSnap/
 │   │   ├── text.py
 │   │   └── time_helpers.py
 │   ├── {config,core,ui,utils,tests}/
+│   ├── file_tree_C_ToolSnap_toolsnap_db.md
 │   ├── main.py
 │   ├── map_structure.bat
 │   ├── map_structure.py
