@@ -1,25 +1,80 @@
 # ToolSnap
 
-**Android tooling capture app + Windows Python database & sync system** for machine shop inventory management.
+Tooling database and ordering system for a machine shop. An Android app captures
+cutting-tool data on the shop floor; a Windows desktop application manages the
+catalog, inventory, and reorder workflow.
 
-## Overview
-- **Android App** (`toolsnap/`) — Captures photos, manufacturer, part numbers, QR codes, and tooling data on the shop floor.
-- **PC Database** (`toolsnap_db/`) — Full desktop application with inventory, BOM, compatibility, importers, QR generation, and UI panels.
-- **Integration** — ADB sync, watchers, FolderSync, and DropRouterHud for reliable data transfer from tablet to PC.
+## How it fits together
 
-## Project Structure
-- `toolsnap/` — Android Gradle project
-- `toolsnap_db/` — Python backend + Tkinter UI
-- `tools/` — Supporting tools (DropRouterHud, MapStructure, LogViewer, etc.)
-- `docs/` — Engineering rules, documentation standards, architecture, and sync guides
+**`android/`** — Kotlin/Compose capture app. Guides the user through photographing
+an assembled tool (body, insert, hardware), runs on-device OCR on data labels and
+speeds/feeds sheets, and writes each session to a self-contained folder.
 
-## Setup & Run
-See `docs/setup_toolsnap_structure.ps1` and individual run scripts.
+**`backend/`** — Python/PySide6 desktop application. Imports those session folders
+and manages the relational tooling database: search, assemblies, compatibility,
+inventory, QR labels, and BOM export.
+
+The two halves meet at one contract: a session folder containing photos and a
+`manifest.json`. The tablet syncs folders into `backend/toolsnap_db/imports/`,
+and the desktop app scans that directory on import. Current manifest schema is
+**v3**; the importer auto-detects and migrates older manifests in memory.
+
+## Running the desktop application
+
+Requires Python 3.11+.
+
+```bash
+cd backend/toolsnap_db
+pip install -r requirements.txt
+python main.py
+```
+
+Or double-click `run_toolsnap_db.bat`.
+
+The database file (`toolsnap.db`) and the `imports/` landing zone are runtime
+state — both are deliberately untracked, and both are created on first run.
+
+## Building the Android app
+
+Requires the Android SDK and a JDK 17+.
+
+```bash
+cd android/toolsnap
+./gradlew.bat assembleDebug
+```
+
+If the build reports `JAVA_HOME is not set`, point it at the JDK bundled with
+Android Studio:
+
+```bash
+export JAVA_HOME="/c/Program Files/Android/Android Studio/jbr"
+```
+
+Output lands in `app/build/outputs/apk/debug/`. The SDK location is read from
+`local.properties`, which is untracked — create it if it is missing:
+
+```properties
+sdk.dir=C:\Android\Sdk
+```
+
+## Documentation
+
+| Document | Contents |
+|---|---|
+| [`docs/architecture-android.md`](docs/architecture-android.md) | Capture app design and wizard flow |
+| [`docs/architecture-backend.md`](docs/architecture-backend.md) | Desktop application brief |
+| [`docs/data-model.md`](docs/data-model.md) | Capture and session data model |
+| [`docs/data-model-relational-redesign.md`](docs/data-model-relational-redesign.md) | Relational design shipped as v3 |
+| [`docs/sync-guide.md`](docs/sync-guide.md) | ADB tablet sync procedure |
+| [`docs/hardening-punch-list.md`](docs/hardening-punch-list.md) | Production readiness items |
+| [`docs/ENGINEERING_RULES.md`](docs/ENGINEERING_RULES.md) | Engineering conventions |
+| [`docs/DOCUMENTATION_STANDARD.md`](docs/DOCUMENTATION_STANDARD.md) | Documentation conventions |
+
+`docs/data-model-v2-superseded.md` and `docs/current-state-2026-02-03.md` are
+kept for history; neither describes the current system.
 
 ## Development
-Follows custom **Governance Stack** (PromptClip for context, DropRouter for atomic deliveries, engineering rules, validators, and low-drift practices).
 
-## Related Documents
-- [Architecture](ToolSnap_Architecture.md)
-- [Data Model](TOOLSNAP_DATA_MODEL.md)
-- [Sync Guide](TOOLSNAP_SYNC_GUIDE.md)
+Work lands on a branch and merges to `main` after review. Agent contributors —
+Claude Code, Grok, or otherwise — are additionally bound by the operating
+boundaries in [`AGENTS.md`](AGENTS.md).
