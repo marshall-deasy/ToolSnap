@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Schema versioning and migrations. The database now carries a
+  `PRAGMA user_version` stamp, and `database.init()` applies any pending
+  migrations on startup. Databases created before this exists are adopted at
+  version 1 without replaying the baseline or touching their rows, and a
+  database written by a newer build is refused rather than opened.
+
+### Fixed
+
+- Schema changes never reached an existing database. `init()` ran
+  `CREATE TABLE IF NOT EXISTS`, so a new column appeared on fresh installs and
+  was silently skipped everywhere else — surfacing later as a runtime
+  `no such column` on a shop PC rather than as an error at upgrade time.
+
 ## [0.1.0] — 2026-08-30
 
 First tagged release. The system works end to end — capture on the tablet,
