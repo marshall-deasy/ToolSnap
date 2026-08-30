@@ -38,6 +38,34 @@ Governed by PromptClip context management, DropRouter atomic deliveries, and str
 - Regenerate file trees and PromptClip collections
 - ...
 
+## Agent Operating Boundaries
+
+These bind every agent (Claude Code, Grok Build/CLI, or any model) acting on this repo.
+
+### Write scope
+- **Editable:** `android/`, `backend/`, `docs/`, `tools/`, and root config files when the task requires.
+- **Never edit without an explicit instruction naming the file:** `.git/`, `local.properties`,
+  `*.db` / `*.sqlite3`, `*.keystore` and any signing material, and anything outside `C:\ToolSnap`.
+- One task per branch. Keep diffs to the smallest surface that completes the task (ER: minimal surface area).
+
+### Stop-and-confirm (pause and ask the human first)
+- Any `git commit`, `push`, force-push, branch delete, history rewrite, or `git reset --hard`.
+- Deleting or overwriting files the agent did not create; running `PURGE_DB.bat`; overwriting `toolsnap.db`.
+- Anything reaching an external service (network publish, email, cloud) or using credentials.
+
+### Authority model
+- **Planner** — reasoning, decomposition, review; may edit docs/plans. Does **not** make production
+  code changes unless explicitly asked to act as Implementer for a small, scoped task.
+- **Implementer** — production code within the write scope, following ENGINEERING_RULES and DOCUMENTATION_STANDARD.
+- **Either role** — changes land on a branch; **nothing merges to `main` without human review.**
+  Branch + review is the interim gate until CI / the governance kernel exists.
+
+### Operating-model note
+ENGINEERING_RULES §2 (PromptClip context, no filesystem access, DropRouterHud zip delivery) describes a
+**legacy transport**. Direct-filesystem agents edit in place, and the DRH validators are not currently
+present in `tools/`. Until the governance kernel lands, the real safety gate is **branch + human review**
+(plus CI once added) — treat "trust the validator" as aspirational, not active.
+
 ## Governance Reminders
 - Focused, fresh context only.
 - Atomic changes + backups via DropRouter.
