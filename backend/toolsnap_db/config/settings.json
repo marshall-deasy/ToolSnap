@@ -1,5 +1,5 @@
 {
-    "import_directory": "C:/toolsnap_db/imports",
+    "import_directory": "",
     "database_path": "toolsnap.db",
     "photo_cache_max_mb": 200,
     "window_width": 1400,

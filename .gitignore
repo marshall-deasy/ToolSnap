@@ -1,6 +1,7 @@
 # IDE / Build
 .idea/
 .gradle/
+.kotlin/
 *.iml
 local.properties
 
@@ -16,12 +17,13 @@ toolsnap.db
 # Android / Mobile
 *.apk
 *.aab
-/toolsnap/app/build/
-/toolsnap/build/
+android/toolsnap/app/build/
+android/toolsnap/build/
+build/
 
 # Data / Imports (large or sensitive)
-toolsnap_db/imports/
-toolsnap_db/imports/**
+backend/toolsnap_db/imports/
+backend/toolsnap_db/imports/**
 
 # Generated
 *.log

@@ -9,6 +9,7 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import Qt, Signal
 
 from config import get as cfg_get, set_value as cfg_set, save as cfg_save
+from config.settings import DEFAULT_IMPORT_DIR
 from core.importer import scan_and_import, ScanResult
 
 
@@ -30,7 +31,7 @@ class ImportPanel(QWidget):
         dir_layout = QVBoxLayout(dir_group)
 
         dir_row = QHBoxLayout()
-        self._dir_input = QLineEdit(cfg_get("import_directory", ""))
+        self._dir_input = QLineEdit(cfg_get("import_directory", "") or str(DEFAULT_IMPORT_DIR))
         self._dir_input.setPlaceholderText("Path to phone sync folder...")
         dir_row.addWidget(self._dir_input, stretch=1)
 
