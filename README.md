@@ -25,7 +25,7 @@ Requires Python 3.11+.
 
 ```bash
 cd backend/toolsnap_db
-pip install -r requirements.txt
+pip install -e .
 python main.py
 ```
 

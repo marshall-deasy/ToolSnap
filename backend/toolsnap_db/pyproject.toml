@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toolsnap-db"
+version = "0.1.0"
+description = "ToolSnap PC database — tooling catalog, inventory and reorder management"
+requires-python = ">=3.11"
+dependencies = [
+    "PySide6>=6.6",
+    "qrcode[pil]>=7.4",
+    "Pillow>=10.0",
+    "reportlab>=4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+]
+
+# Flat layout: these are imported as top-level modules (from core.importer
+# import ...), matching how main.py and the UI already reference them.
+[tool.setuptools]
+packages = ["config", "core", "ui", "utils"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Flat layout has no installed package to import from, so put the project
+# root on sys.path the same way main.py does at runtime.
+pythonpath = ["."]
