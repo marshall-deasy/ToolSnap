@@ -64,22 +64,6 @@ INSERT_ROLES = frozenset({
     ComponentRole.WIPER_INSERT,
 })
 
-# V2 assemblyType → ToolCategory mapping for legacy migration
-V2_ASSEMBLY_TYPE_MAP: dict[str, ToolCategory] = {
-    "END_MILL": ToolCategory.END_MILL,
-    "INDEXABLE_MILL": ToolCategory.INDEXABLE_MILL_BODY,
-    "DRILL_SOLID": ToolCategory.DRILL,
-    "DRILL_INDEXABLE": ToolCategory.INDEXABLE_DRILL_BODY,
-    "BORING_BAR": ToolCategory.BORING_BAR_BODY,
-    "TURNING_TOOL": ToolCategory.TURNING_HOLDER,
-    "THREADING_TOOL": ToolCategory.THREADING_HOLDER,
-    "GROOVING_PARTING": ToolCategory.GROOVING_HOLDER,
-    "TAP": ToolCategory.TAP,
-    "REAMER": ToolCategory.REAMER,
-    "HOLDER_ONLY": ToolCategory.HOLDER,
-    "CUSTOM": ToolCategory.OTHER,
-}
-
 # Expected attribute keys per category (order = display order in UI)
 CATEGORY_ATTRIBUTES: dict[ToolCategory, list[str]] = {
     ToolCategory.END_MILL: [

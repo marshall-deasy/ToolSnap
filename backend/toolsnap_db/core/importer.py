@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Optional
 
 from core.models import Tool, Component
-from core.enums import ToolCategory, V2_ASSEMBLY_TYPE_MAP, ComponentRole
+from core.enums import ToolCategory
 from core.database import transaction
 from core import repo
 from core.dedup import find_duplicate
@@ -98,8 +98,6 @@ def _import_manifest(manifest_path: Path, session_dir: Path) -> ImportResult:
         # Migrate to V3 format in memory
         if version == 1:
             v3_data = _migrate_v1(data, session_dir)
-        elif version == 2:
-            v3_data = _migrate_v2(data, session_dir)
         else:
             v3_data = data
 
@@ -279,89 +277,5 @@ def _migrate_v1(data: dict, session_dir: Path) -> dict:
     }
 
     tools.append(tool)
-
-    return {"schemaVersion": 3, "exportedAt": ts, "tools": tools, "components": components}
-
-
-def _migrate_v2(data: dict, session_dir: Path) -> dict:
-    """Migrate V2 manifest to V3 format.
-
-    V2: Tree-structured assembly with typed components (BODY, INSERT, HARDWARE, ACCESSORY).
-    """
-    tools = []
-    components = []
-    ts = data.get("exportedAt", now_iso())
-
-    assembly = data.get("assembly", data)
-    assembly_type = assembly.get("assemblyType", "CUSTOM")
-    category = V2_ASSEMBLY_TYPE_MAP.get(assembly_type, ToolCategory.OTHER)
-
-    # Parent tool (the body)
-    body_data = assembly.get("body", {})
-    parent_id = body_data.get("toolId", str(uuid.uuid4()))
-    is_assembly = bool(assembly.get("components"))
-
-    parent = {
-        "toolId": parent_id,
-        "name": body_data.get("name", f"V2 Import — {session_dir.name}"),
-        "category": category.value,
-        "type": "assembly" if is_assembly else "standalone",
-        "manufacturer": body_data.get("manufacturer"),
-        "catalogNumber": body_data.get("catalogNumber"),
-        "description": body_data.get("description"),
-        "unitSystem": body_data.get("unitSystem", "IMPERIAL"),
-        "attributes": body_data.get("attributes", {}),
-        "photos": body_data.get("photos", []),
-        "tags": body_data.get("tags", []),
-        "notes": body_data.get("notes"),
-        "createdAt": body_data.get("createdAt", ts),
-        "modifiedAt": body_data.get("modifiedAt", ts),
-    }
-    tools.append(parent)
-
-    # Components
-    for comp in assembly.get("components", []):
-        comp_type = comp.get("type", "OTHER").upper()
-        child_data = comp.get("tool", comp)
-        child_id = child_data.get("toolId", str(uuid.uuid4()))
-
-        # Map V2 component type to category and role
-        if comp_type == "INSERT":
-            child_cat = ToolCategory.INSERT.value
-            role = ComponentRole.INSERT.value
-        elif comp_type == "HARDWARE":
-            child_cat = ToolCategory.SCREW.value
-            role = ComponentRole.SCREW.value
-        elif comp_type == "ACCESSORY":
-            child_cat = ToolCategory.OTHER.value
-            role = ComponentRole.OTHER.value
-        else:
-            child_cat = ToolCategory.OTHER.value
-            role = ComponentRole.OTHER.value
-
-        child_tool = {
-            "toolId": child_id,
-            "name": child_data.get("name", f"{comp_type} — {session_dir.name}"),
-            "category": child_cat,
-            "type": "standalone",
-            "manufacturer": child_data.get("manufacturer"),
-            "catalogNumber": child_data.get("catalogNumber"),
-            "description": child_data.get("description"),
-            "unitSystem": child_data.get("unitSystem", "IMPERIAL"),
-            "attributes": child_data.get("attributes", {}),
-            "photos": child_data.get("photos", []),
-            "tags": child_data.get("tags", []),
-            "notes": child_data.get("notes"),
-            "createdAt": child_data.get("createdAt", ts),
-            "modifiedAt": child_data.get("modifiedAt", ts),
-        }
-        tools.append(child_tool)
-        components.append({
-            "parentToolId": parent_id,
-            "childToolId": child_id,
-            "role": role,
-            "quantity": comp.get("quantity", 1),
-            "notes": comp.get("notes"),
-        })
 
     return {"schemaVersion": 3, "exportedAt": ts, "tools": tools, "components": components}
