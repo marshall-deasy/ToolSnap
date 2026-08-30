@@ -1,3 +1,3 @@
 @echo off
-python "C:\toolsnap_db\main.py"
+python "%~dp0main.py"
 pause
