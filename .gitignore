@@ -13,6 +13,7 @@ venv/
 *.db
 *.sqlite3
 toolsnap.db
+backend/toolsnap_db/toolsnap.db
 
 # Android / Mobile
 *.apk
@@ -27,4 +28,4 @@ backend/toolsnap_db/imports/**
 
 # Generated
 *.log
-file_tree_*.md   # optional: regenerate as needed
+file_tree_*.md
